@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - MomentX University</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Library (Feather Icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        :root {
+            --primary-color: #ff7f50;
+            --secondary-color: #333;
+            --background-color: #f4f7fc;
+            --surface-color: #ffffff;
+            --text-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: var(--surface-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            align-items: center; 
+        }
+
+        .menu ul li {
+            margin-left: 30px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .login-btn {
+            background-color: var(--primary-color);
+            color: white !important; 
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .login-btn:hover {
+            background-color: #e66a40;
+            transform: translateY(-2px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 140px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+        .hero-btn:hover {
+            background-color: #e66a40;
+            border-color: #e66a40;
+            transform: translateY(-3px);
+        }
+
+        /* --- Sections & Cards --- */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            /* One column by default for mobile */
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        /* On screens wider than 768px, switch to 2 columns */
+        @media (min-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feature-card {
+            background-color: var(--surface-color);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        .feature-card .icon {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            background-color: var(--surface-color);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+        }
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.2);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            justify-self: start;
+        }
+        .form-btn:hover {
+            background-color: #e66a40;
+            transform: translateY(-2px);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="Home.html" class="logo">MomentX</a>
+        <div class="menu">
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Campus.html">CAMPUS</a></li>
+                <li><a href="curriculum.html">CURRICULUM</a></li>
+                <li><a href="Help.html">HELP</a></li>
+                <li><a href="index.html" class="login-btn">LOGIN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Forge Your Future at MomentX</h1>
+        <p>Discover a community of innovators, leaders, and thinkers. Your journey to excellence starts here.</p>
+        <a href="curriculum.html" class="hero-btn">View Curriculum</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Why Choose MomentX?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="icon" data-feather="book-open" width="48" height="48"></i>
+                <h3>World-Class Programs</h3>
+                <p>Explore a wide range of undergraduate and graduate programs designed to prepare you for success in a rapidly changing world.</p>
+            </div>
+            <div class="feature-card">
+                <i class="icon" data-feather="users" width="48" height="48"></i>
+                <h3>Vibrant Campus Life</h3>
+                <p>Engage in a rich campus life with diverse student organizations, clubs, and activities that foster growth and friendship.</p>
+            </div>
+            <div class="feature-card">
+                <i class="icon" data-feather="award" width="48" height="48"></i>
+                <h3>Expert Faculty</h3>
+                <p>Learn from and collaborate with our dedicated faculty and staff, who are leaders and innovators in their respective fields.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="icon" data-feather="trending-up" width="48" height="48"></i>
+                <h3>Recognition & Partnerships</h3>
+                <p>Ranked among the Top 20 universities in the nation, with over 150+ corporate tie-ups ensuring excellent placement opportunities.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <section id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="form-btn">Submit Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 MomentX University. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Activate Feather Icons
+        feather.replace();
+
+        // Handle Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            alert(`Thank you for your message, ${name}! We will get back to you at ${email} shortly.`);
+            
+            // Optionally, reset the form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
