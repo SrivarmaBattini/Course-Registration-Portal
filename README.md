@@ -34,7 +34,6 @@ The project demonstrates interactive front-end design, form validation, and basi
 - **HTML5** – Page structure  
 - **CSS3** – Styling and layout  
 - **JavaScript** – DOM interaction and form validation  
-- **Google Fonts (Poppins)** – Modern typography
 
 ---
 
