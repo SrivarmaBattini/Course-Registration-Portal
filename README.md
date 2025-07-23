@@ -4,7 +4,7 @@ A responsive web-based front-end system for university students to log in, explo
 
 ---
 
-## 📌 About the Project
+## About the Project
 
 The **MomentX Course Registration Portal** is a simulated university registration system that mimics real-world academic portals. Students can:
 
@@ -18,18 +18,18 @@ The project demonstrates interactive front-end design, form validation, and basi
 
 ---
 
-## 🌟 Features
+## Features
 
-- 🧑‍🎓 **Student Login System** with validation  
-- 📚 **Branch & Curriculum Selection** (e.g., AI, CSE, ECE, etc.)  
-- 🗂️ **Semester-wise Subject Display**  
-- ✔️ **Credit-based Course Enrollment Check**  
-- 🔄 **Confirmation and Feedback Pages**  
-- 🎨 **Responsive Design with Modern Fonts and Styling**
+- **Student Login System** with validation  
+- **Branch & Curriculum Selection** (e.g., AI, CSE, ECE, etc.)  
+- **Semester-wise Subject Display**  
+- **Credit-based Course Enrollment Check**  
+- **Confirmation and Feedback Pages**  
+- **Responsive Design with Modern Fonts and Styling**
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** – Page structure  
 - **CSS3** – Styling and layout  
@@ -37,7 +37,7 @@ The project demonstrates interactive front-end design, form validation, and basi
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```plaintext
 ├── index.html            # Login and landing page
@@ -46,5 +46,8 @@ The project demonstrates interactive front-end design, form validation, and basi
 ├── confirmation.html     # Final registration summary
 ├── About.html            # About the university
 ├── Campus.html           # Campus overview
-├── Help.html             # FAQs or help page (optional)
-├── style.css             # CSS styles (not included yet)
+├── Help.html             # FAQs or help page
+├── Password.html         # To reset password
+├── style.css             # CSS styles 
+├── Script.js             # Dynamic interaction for Firstpage 
+├── syllabus.js           # Dynamic interaction for curriculum page
