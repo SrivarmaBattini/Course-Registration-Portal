@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MomentX University</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #ff7f50;
+            --secondary-color: #333;
+            --background-color: #f4f7fc;
+            --surface-color: #ffffff;
+            --text-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: var(--surface-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu ul li {
+            margin-left: 30px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Page Header --- */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* --- Main Content --- */
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            background-color: var(--surface-color);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden; 
+        }
+
+        .content-section .text-content {
+            padding: 40px;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .content-section .image-content {
+            flex: 1;
+            min-width: 300px;
+            height: 400px; 
+        }
+        
+        .content-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Alternating layout */
+        .content-section:nth-child(even) .text-content {
+            order: 2;
+        }
+        .content-section:nth-child(even) .image-content {
+            order: 1;
+        }
+
+        .text-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        .text-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .text-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="Home.html" class="logo">MomentX</a>
+        <div class="menu">
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Campus.html">CAMPUS</a></li>
+                <li><a href="Help.html">HELP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>About MomentX University</h1>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <div class="text-content">
+                <h2>Our Storied History</h2>
+                <p>Founded on the principle that education can transform lives, MomentX University has grown from a humble beginning into a world-class institution. Our journey, which began in [Year] with visionary founder [Founder's Name], is a testament to our unwavering commitment to academic excellence, innovative research, and social responsibility. We are proud of our legacy and excited for the future we are building together.</p>
+            </div>
+            
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Historic university building">
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="text-content">
+                <h2>World-Class Academics</h2>
+                <p>At MomentX, our academic programs are the cornerstone of our identity. We offer a rigorous and comprehensive curriculum designed to challenge students and prepare them for leadership roles in a global landscape. Our dedicated education blocks are equipped with modern technology to facilitate interactive and collaborative learning experiences. From business administration to emerging technologies, our courses are taught by expert faculty committed to fostering intellectual curiosity.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Students in a graduation ceremony">
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="text-content">
+                <h2>Vibrant Student Life</h2>
+                <p>Education at MomentX extends far beyond the classroom walls. We believe in holistic development, which is why we offer a rich and diverse campus life filled with opportunities for growth, friendship, and fun.</p>
+                
+                <h3>Clubs & Organizations</h3>
+                <p>Discover your passion and connect with like-minded peers in over 50 student-run clubs. From the Debate Society and Entrepreneurship Club to our student-run media channel and coding groups, there's a community for everyone.</p>
+
+                <h3>Sports & Athletics</h3>
+                <p>Stay active and build team spirit with our extensive sports programs. Our campus boasts top-tier facilities for basketball, soccer, tennis, and more. Whether you're a competitive athlete or just looking for recreational fun, our sports clubs and intramural leagues are open to all.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="University sports team celebrating">
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="text-content">
+                <h2>State-of-the-Art Facilities</h2>
+                <p>Our campus is designed to provide an optimal environment for learning and innovation. The main education blocks feature smart classrooms, advanced laboratories, and collaborative study spaces. Our state-of-the-art media center provides students with access to the latest audio-visual equipment, supporting projects in filmmaking, journalism, and digital media production. We continuously invest in our infrastructure to ensure our students have the tools they need to succeed.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://images.pexels.com/photos/256517/pexels-photo-256517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern university library">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 MomentX University. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
